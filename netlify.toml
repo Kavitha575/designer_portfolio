@@ -1,0 +1,13 @@
+[build]
+  publish = "public"                    # Directory to publish (where your static files are located)
+  functions = "functions"                # Directory for serverless functions
+  command = "npm run build"              # Build command (adjust if necessary)
+
+[[redirects]]
+  from = "/*"                            # Redirect all traffic
+  to = "/index.html"                     # Serve index.html for SPA
+  status = 200                            # HTTP status code
+  force = true                            # Force redirect even for 404
+
+[dev]
+  functions = "functions"                # Directory for serverless functions in development mode
